@@ -1,10 +1,10 @@
-//
+//External Dependencies
 const cookieSession = require('cookie-session');
 const express = require('express');
 const mongoose = require('mongoose');
 const passport = require('passport');
 
-//
+//Local Dependencies
 const keys = require('./config/keys');
 
 
@@ -23,6 +23,7 @@ app.use(
 );
 
 app.use(passport.initialize());
+
 app.use(passport.session());
 
 require('./routes/authRoutes')(app);
